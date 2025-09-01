@@ -1,0 +1,88 @@
+/* FILTERS - Nike Style */
+.filters {
+  margin: 20px auto;
+  padding: 15px 25px;
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: var(--nike-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.filters input[type="text"],
+.filters select,
+.filters input[type="number"] {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--nike-gray);
+  transition: all 0.3s ease;
+  color: var(--nike-black);
+}
+
+.search-input {
+  width: 300px;
+}
+
+.filter-options select,
+.filter-options input[type="number"] {
+  width: 160px;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus,
+.filters input[type="number"]:focus {
+  border-color: var(--nike-black);
+  background: var(--nike-white);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.filters select:hover,
+.filters input[type="number"]:hover,
+.filters input[type="text"]:hover {
+  border-color: var(--nike-dark-gray);
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.clear-btn {
+  background: var(--nike-black);
+  color: var(--nike-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.clear-btn:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .filters input,
+  .filters select,
+  .clear-btn {
+    width: 100%;
+  }
+}
